@@ -17,17 +17,20 @@ model User {
   id        Int      @id @default(autoincrement())
   name      String
   password  String
+  avatar    String?
+  secret    String?
   email     String?
   mobile    String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  App App[]
+  App       App[]
 }
 
 model App {
   id        Int      @id @default(autoincrement())
   title     String
   content   String   @db.Text
+  is_free   Boolean  @default(true)
   preview   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
