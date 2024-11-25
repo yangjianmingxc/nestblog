@@ -29,6 +29,10 @@
 ## Project setup
 
 ```bash
+- node 版本18
+```
+
+```bash
 $ pnpm install
 ```
 
