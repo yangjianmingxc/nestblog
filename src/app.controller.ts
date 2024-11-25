@@ -13,6 +13,6 @@ export class AppController {
 
     @Get()
     getHello(): any {
-        return this.config.data.address
+        return this.config.get('address')
     }
 }
