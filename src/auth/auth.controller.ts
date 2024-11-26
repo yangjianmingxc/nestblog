@@ -1,3 +1,9 @@
+/*
+ * @Brief: 
+ * @Description: 
+ * @Author: yangjianming
+ * @Date: 2024-11-25 17:56:48
+ */
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common'
 import { AuthService } from './auth.service'
 import { UpdateAuthDto } from './dto/update-auth.dto'
