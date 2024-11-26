@@ -15,6 +15,7 @@ export class AuthController {
 
     @Post('register')
     register(@Body() dto: registerDto) {
+        console.log(222)
         return dto
     }
 
