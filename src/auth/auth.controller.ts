@@ -1,12 +1,12 @@
 /*
- * @Brief: 
- * @Description: 
+ * @Brief:
+ * @Description:
  * @Author: yangjianming
  * @Date: 2024-11-25 17:56:48
  */
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common'
 import { AuthService } from './auth.service'
-import { UpdateAuthDto } from './dto/update-auth.dto'
+import { LoginDto } from './dto/login.dto'
 import { registerDto } from './dto/register.dto'
 
 @Controller('auth')
@@ -15,10 +15,13 @@ export class AuthController {
 
     @Post('register')
     register(@Body() dto: registerDto) {
-        console.log(222)
-        return dto
+        return this.authService.register(dto)
     }
 
+    @Post('login')
+    login(@Body() dto: LoginDto) {
+        return this.authService.login(dto)
+    }
     // @Post()
     // create(@Body() createAuthDto: CreateAuthDto) {
     //   return this.authService.create(createAuthDto);

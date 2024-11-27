@@ -15,7 +15,6 @@ export default async () => {
         },
         take: 1,
     })
-    console.log('user :>> ', user)
     await prisma.user.update({
         where: {
             id: user.id,
